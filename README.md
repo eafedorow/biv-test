@@ -1,5 +1,20 @@
 # BivTest
 
+Тестовое задание на должность frontend разработчика. Angular. BIV.
+
+## Аннотация к заданию:
+Необходимо реализовать представленный функционал добавления карточек сотрудника через форму.
+
+Необходимо использовать: 
+фреймворк Angular,
+стили SCSS,
+Angular Material.
+
+Тип форм: Reactive Forms
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
 
 ## Development server
