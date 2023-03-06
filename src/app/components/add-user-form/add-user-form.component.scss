@@ -1,9 +1,15 @@
+@import 'src/stylesheets/vars';
+
 .form {
   display: flex;
   flex-direction: column;
 
-  .input {
+  &__input {
     background-color: transparent;
+
+    .mat-mdc-text-field-wrapper {
+      background-color: transparent;
+    }
     & + & {
       margin-top: 25px;
     }
@@ -16,7 +22,7 @@
     line-height: 16px;
     letter-spacing: 0.0357143em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: $color-light;
     padding: 10px 8px;
   }
 }

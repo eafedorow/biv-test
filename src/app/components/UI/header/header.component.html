@@ -1,4 +1,4 @@
 <mat-toolbar class="header" color="primary">
-  <a color="header__btn" mat-raised-button color="primary" href="/">Страница 1</a>
-  <a color="header__btn" mat-raised-button color="primary" href="users">Страница 2</a>
+  <a  mat-raised-button color="header__btn" [routerLink]="['/add-user']"  routerLinkActive="active-button">Страница 1</a>
+  <a  mat-raised-button color="header__btn" [routerLink]="['/users']"  routerLinkActive="active-button">Страница 2</a>
 </mat-toolbar>
