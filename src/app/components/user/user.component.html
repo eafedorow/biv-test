@@ -1,0 +1,18 @@
+<div class="user" >
+  <span class="user__title">Сотрудник № {{ index + 1 }}</span>
+  <div class="user__fields">
+    <div class="user__field-item">
+      <div class="user__field-item-title">Фамилия</div>
+      <div class="user__field-item-value">{{ user.surname }}</div>
+    </div>
+    <div class="user__field-item">
+      <div class="user__field-item-title">Имя</div>
+      <div class="user__field-item-value">{{ user.name }}</div>
+    </div>
+    <div class="user__field-item">
+      <div class="user__field-item-title">Отчество</div>
+      <div class="user__field-item-value">{{ user.middlename }}</div>
+    </div>
+  </div>
+  <button (click)="returnId(user.id)" mat-raised-button color="primary">удалить сотрудника</button>
+</div>

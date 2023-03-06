@@ -1,0 +1,22 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  .input {
+    background-color: transparent;
+    & + & {
+      margin-top: 25px;
+    }
+  }
+
+  &__btn {
+    width: max-content;
+    margin-top: 30px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.0357143em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 10px 8px;
+  }
+}

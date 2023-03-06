@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "surname": "Иванов",
+      "name": "Иван",
+      "middlename": "Иванович"
+    },
+    {
+      "id": "2",
+      "surname": "Семёнов",
+      "name": "Семён",
+      "middlename": "Семёнович"
+    },
+    {
+      "id": "3",
+      "surname": "Алексеев",
+      "name": "Алексей",
+      "middlename": "Алексеевич"
+    },
+    {
+      "id": "d2fc6022-c4d4-4842-a272-713df7613d25",
+      "surname": "Hello",
+      "name": "Darkness",
+      "middlename": "Old Friend"
+    }
+  ]
+}

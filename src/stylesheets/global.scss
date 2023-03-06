@@ -21,3 +21,21 @@ body {
   margin: 0;
   color: $color-default;
 }
+
+.container {
+  max-width: 634px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: rgba($color-dark, 0.87);
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.page-wrapper {
+  margin-top: 108px;
+}

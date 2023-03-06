@@ -1,0 +1,9 @@
+<div class="users-list">
+  <div *ngIf="users.length; else noUsers" class="">
+    <app-user (outDeletedUserId)="removeUser($event)" *ngFor="let user of users; let i = index" [user]="user" [index]="i" />
+  </div>
+  <ng-template #noUsers>
+    <p>Нет записей о пользователях</p>
+  </ng-template>
+</div>
+

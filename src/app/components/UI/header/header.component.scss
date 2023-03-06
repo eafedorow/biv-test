@@ -1,0 +1,21 @@
+.header {
+  padding: 0;
+
+  &__btn {
+    .mdc-button__label {
+      height: 100%;
+
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+
+      display: flex;
+      align-items: center;
+      text-align: center;
+      text-transform: uppercase;
+      color: #fff;
+    }
+  }
+}
+
+
