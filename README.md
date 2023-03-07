@@ -29,6 +29,6 @@ Angular Material.
 
 ## Сборка
 
-Необходимо выполнить `ng build` чтобы собарть проект
+Необходимо выполнить `ng build` чтобы собрать проект
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
