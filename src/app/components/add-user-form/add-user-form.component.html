@@ -1,70 +1,72 @@
 <div class="page-wrapper">
   <div class="container">
     <h1 class="page-title">Добавить сотрудника</h1>
-
-    <form class="form" [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
-      <mat-form-field class="form__input">
-        <mat-label>Фамилия</mat-label>
-        <input
-          matInput
-          placeholder="Иванов"
-          formControlName="surname"
-          [class.invalid]="
-            addUserForm.get('surname')?.invalid
-            &&
-            (addUserForm.get('surname')?.dirty || addUserForm.get('username')?.touched || isSubmitted)"
-        >
-        <mat-error
-          *ngIf="
-            addUserForm.get('surname')?.hasError('required') &&
-            (addUserForm.get('surname')?.dirty || addUserForm.get('surname')?.touched || isSubmitted)
-      ">
-          Фамилия это <strong>обязательное</strong> поле
-        </mat-error>
-      </mat-form-field>
-
-      <mat-form-field class="form__input">
-        <mat-label>Имя</mat-label>
-        <input
-          matInput
-          placeholder="Иван"
-          formControlName="name"
-          [class.invalid]="
-            addUserForm.get('name')?.invalid
-            &&
-            (addUserForm.get('name')?.dirty || addUserForm.get('name')?.touched || isSubmitted)"
-        >
-        <mat-error
-          *ngIf="
-        addUserForm.get('name')?.hasError('required') &&
-        (addUserForm.get('name')?.dirty || addUserForm.get('name')?.touched || isSubmitted)
-      ">
-          Имя это <strong>обязательное</strong> поле
-        </mat-error>
-      </mat-form-field>
-
-      <mat-form-field class="form__input">
-        <mat-label>Отчество</mat-label>
-        <input
-          matInput
-          placeholder="Иванович"
-          formControlName="middlename"
-          [class.invalid]="
-        addUserForm.get('middlename')?.invalid
-        &&
-        (addUserForm.get('middlename')?.dirty || addUserForm.get('middlename')?.touched || isSubmitted)"
-        >
-        <mat-error
-          *ngIf="
-          addUserForm.get('middlename')?.hasError('required') &&
-          (addUserForm.get('middlename')?.dirty || addUserForm.get('middlename')?.touched || isSubmitted)
+      <form class="form" [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="form__input">
+          <mat-label>Фамилия</mat-label>
+          <input
+            matInput
+            placeholder="Иванов"
+            formControlName="surname"
+            [class.invalid]="
+              addUserForm.get('surname')?.invalid
+              &&
+              (addUserForm.get('surname')?.dirty || addUserForm.get('username')?.touched || isSubmitted)"
+          >
+          <mat-error
+            *ngIf="
+              addUserForm.get('surname')?.hasError('required')
+              &&
+              (addUserForm.get('surname')?.dirty || addUserForm.get('surname')?.touched || isSubmitted)
         ">
-          Отчество это <strong>обязательное</strong> поле
-        </mat-error>
-      </mat-form-field>
+            Фамилия это <strong>обязательное</strong> поле
+          </mat-error>
+        </mat-form-field>
 
-      <button class="form__btn" [disabled]="addUserForm.invalid" type="submit" mat-raised-button color="primary">Добавить</button>
-    </form>
+        <mat-form-field class="form__input" >
+          <mat-label>Имя</mat-label>
+          <input
+            matInput
+            placeholder="Иван"
+            formControlName="name"
+            [class.invalid]="
+              addUserForm.get('name')?.invalid
+              &&
+              (addUserForm.get('name')?.dirty || addUserForm.get('name')?.touched || isSubmitted)"
+          >
+          <mat-error
+            *ngIf="
+              addUserForm.get('name')?.hasError('required')
+              &&
+              (addUserForm.get('name')?.dirty || addUserForm.get('name')?.touched || isSubmitted)
+        ">
+            Имя это <strong>обязательное</strong> поле
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="form__input">
+          <mat-label>Отчество</mat-label>
+          <input
+            matInput
+            placeholder="Иванович"
+            formControlName="middlename"
+            [class.invalid]="
+              addUserForm.get('middlename')?.invalid
+              &&
+              (addUserForm.get('middlename')?.dirty || addUserForm.get('middlename')?.touched || isSubmitted)"
+          >
+          <mat-error
+            *ngIf="
+              addUserForm.get('middlename')?.hasError('required')
+              &&
+              (addUserForm.get('middlename')?.dirty || addUserForm.get('middlename')?.touched || isSubmitted)"
+          >
+            Отчество это <strong>обязательное</strong> поле
+          </mat-error>
+        </mat-form-field>
+
+        <button class="form__btn" [disabled]="addUserForm.invalid" type="submit" mat-raised-button color="primary">Добавить</button>
+      </form>
   </div>
 </div>
 

@@ -1,8 +1,17 @@
 <div class="page-wrapper">
   <div class="container">
-    <div>
-      <div *ngIf="users.length; else noUsers" class="users-list">
-        <app-user (outDeletedUserId)="removeUser($event)" *ngFor="let user of users; let i = index" [user]="user" [index]="i" />
+
+    <mat-spinner class="loading-spinner" *ngIf="isLoading"></mat-spinner>
+
+    <div *ngIf="!isLoading">
+      <div *ngIf="users?.length; else noUsers" class="users-list">
+        <app-user
+          (outDeletedUserId)="removeUser($event)"
+          *ngFor="let user of users;
+          let i = index"
+          [index]="i"
+          [user]="user"
+        />
       </div>
       <ng-template #noUsers>
         <p>Нет записей о пользователях</p>

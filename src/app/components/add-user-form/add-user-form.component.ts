@@ -1,21 +1,25 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
-import {IUser} from "../../models/users";
 import {UUID} from "angular2-uuid";
-import { UsersService } from "../../services/users.service";
+
+import { IUser } from 'src/app/models/users';
+import { UsersService } from 'src/app/services/users.service';
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-add-user-form',
   templateUrl: './add-user-form.component.html',
   styleUrls: ['./add-user-form.component.scss']
 })
-export class AddUserFormComponent {
+export class AddUserFormComponent implements OnInit {
   addUserForm = this.fb.group({
     surname:    ['', Validators.required],
     name:       ['', Validators.required],
     middlename: ['', Validators.required]
   })
   isSubmitted = false;
+  usersFormSubscription: Subscription;
+
   constructor(private fb: FormBuilder, private UsersService: UsersService) {}
 
   onSubmit(): void {
@@ -26,9 +30,14 @@ export class AddUserFormComponent {
       name:         this.addUserForm.get('name')?.value || '',
       middlename:   this.addUserForm.get('middlename')?.value || '',
     }
-    this.UsersService.postUser(newUser).subscribe((data) => {
-      console.log(data);
-    })
+    this.usersFormSubscription = this.UsersService.postUser(newUser).subscribe(() => {})
     this.addUserForm.reset();
+  }
+
+  ngOnInit() {
+  }
+
+  ngOnDestroy() {
+    if (this.usersFormSubscription) this.usersFormSubscription.unsubscribe();
   }
 }

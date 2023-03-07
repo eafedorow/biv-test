@@ -24,19 +24,42 @@ body {
 
 .container {
   max-width: 664px;
-  padding: 0 15px;
+  padding: 0 1rem;
   margin: 0 auto;
 }
 
 .page-title {
   font-weight: 500;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
   color: rgba($color-dark, 0.87);
   text-align: center;
-  margin-bottom: 90px;
+  margin-bottom: 10rem;
 }
 
 .page-wrapper {
-  margin-top: 108px;
+  margin-top: 10rem;
+}
+
+.error-handler {
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-danger;
+  color: $color-light;
+  font-weight: 500;
+
+  position: relative;
+
+  &__btn-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2rem;
+
+    .mat-mdc-unelevated-button>.mat-icon {
+      margin: 0;
+    }
+  }
 }

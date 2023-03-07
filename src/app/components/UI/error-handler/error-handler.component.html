@@ -1,0 +1,16 @@
+<div
+     *ngIf="errorService.error$ | async as error"
+     class="error-handler"
+>
+  {{ error}}
+
+  <div class="error-handler__btn-wrapper">
+    <button
+      class=""
+      mat-flat-button
+      (click)="errorService.clear()"
+    >
+      <mat-icon >close</mat-icon>
+    </button>
+  </div>
+</div>
